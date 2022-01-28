@@ -1,0 +1,180 @@
+/*sass fonts*/
+$font-main:    Montserrat, sans-serif
+$primary-color: #000000
+$orange: #ff6224
+$green: #00a652
+$pink: #ff7fc2
+$blue: #006dfe
+
+/*reset classes*/
+a, ul, li, h1, h2, h3, h4
+  margin: 0
+  padding: 0
+  text-decoration: none
+  list-style: none
+
+a:visited
+    color: $primary-color
+
+/*css classes*/
+body
+  font: 100% $font-main
+  color: $primary-color
+  max-width: 840px
+  width: 100%
+  margin: 20px auto
+  position: relative
+
+.footer
+  text-align: center
+
+.main
+  display: flex
+  justify-content: center
+
+.tire
+  -webkit-hyphens: auto
+  -moz-hyphens: auto
+  -ms-hyphens: auto
+  hyphens: auto
+
+.nav
+  max-width: 800px
+  width: 100%
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: end
+  padding-bottom: 20px
+  flex-wrap: wrap
+
+.nav__ul
+  display: flex
+  justify-content: flex-end
+
+.nav__li
+  text-transform: uppercase
+  padding: 0 8px
+  font-weight: bold
+  opacity: 0.5
+
+.nav__li__active
+  color: $orange
+  opacity: 1
+
+.wrapper
+  width: 900px
+  height: 500px
+  border: 5px solid lightgrey
+  border-radius: 10px
+  display: flex
+
+.wrapper-block
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.wrapper-block_left
+  max-width: 350px
+  width: 100%
+  opacity: 1
+  &:active
+    opacity: 0.5
+
+.wrapper-block_right
+  max-width: 500px
+  width: 100%
+
+.wrapper-block__button
+  border-radius: 25px
+  border: 2px solid black
+  margin-bottom: 20px
+
+.wrapper-block__button__container
+  width: 200px
+  height: 200px
+  border-radius: 25px
+  border: 5px solid white
+  position: relative
+
+.wrapper-block__button__green
+  background-color: $green
+  &::after
+    content: 'M'
+    display: block
+    position: absolute
+    bottom: 10px
+    left: 20px
+    opacity: 0.25
+    color: #ffffff
+    font-size: 60px
+    font-weight: 700
+
+.wrapper-block__text
+  max-width: 225px
+  width: 100%
+  margin-left: 50px
+  position: relative
+  &::before
+    content: ''
+    background-color: darkgrey
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    position: absolute
+    top: 6px
+    left: -30px
+
+.wrapper-block__container
+  display: flex
+  opacity: 1
+  &:active
+    opacity: 0.5
+
+.wrapper-block__button__pink
+  width: 130px
+  height: 130px
+  background-color: $pink
+  &::after
+    content: 'R'
+    display: block
+    position: absolute
+    bottom: 10px
+    left: 20px
+    opacity: 0.25
+    color: #ffffff
+    font-size: 35px
+    font-weight: 700
+
+.wrapper-block__button__blue
+  width: 130px
+  height: 130px
+  background-color: $blue
+  &::after
+    content: 'NS'
+    display: block
+    position: absolute
+    bottom: 10px
+    left: 20px
+    opacity: 0.25
+    color: #ffffff
+    font-size: 35px
+    font-weight: 700
+
+
+/*Mobile*/
+@media screen and (max-width: 600px)
+  .nav
+    flex-wrap: wrap
+    justify-content: center
+    text-align: center
+  .wrapper
+    width: 300px
+    height: 900px
+    flex-wrap: wrap
+  .wrapper-block__container
+    flex-direction: column
+    align-items: center
+    margin-bottom: 20px
+
